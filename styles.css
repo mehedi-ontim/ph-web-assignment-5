@@ -9,7 +9,9 @@
 
 .completed-btn:hover {
   cursor: pointer;
+  background-color: #2639b1;
 }
 .completed-btn:disabled {
   cursor: not-allowed;
+  background-color: #9ca3af;
 }
