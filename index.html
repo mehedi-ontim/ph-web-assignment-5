@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Dev Board</title>
     <!-- CSS File Link -->
     <link rel="stylesheet" href="styles.css" />
     <!-- Tailwind CDN -->
@@ -35,7 +35,7 @@
             <p class="text-[32px] font-bold" id="task-done">23</p>
           </div>
           <div class="flex justify-center items-center mr-9">
-            <button><img src="assets/theme-btn.png" alt="" /></button>
+            <button onclick="changeBackgroundColor()"><img src="assets/theme-btn.png" alt="" /></button>
           </div>
         </div>
       </nav>
@@ -43,7 +43,7 @@
 
     <main class="w-5/6 mx-auto mt-5 flex justify-between">
       <section class="w-3/4 mr-6 p-6 bg-white rounded-2xl mb-11 shadow-sm">
-        <div class="flex justify-around items-center mb-12">
+        <div class="flex justify-around items-center mb-7">
           <div
             class="flex justify-center items-center w-[200px] h-[100px] bg-[#F4F7FF] rounded-xl shadow-sm"
           >
@@ -57,18 +57,20 @@
               <p class="text-[#00303C] text-3xl font-bold" id="task-left">6</p>
             </div>
           </div>
-          <div
-            id="discoverH1"
-            class="flex items-center w-[430px] h-[100px] rounded-xl shadow-md"
-          >
-            <div class="ml-10"><img src="assets/board.png" alt="" /></div>
-            <div>
-              <h1 class="text-xl font-medium text-white ml-6">
-                Discover Something <br />
-                New Today!
-              </h1>
+          <a href="blog.html"
+            ><div
+              id="discoverH1"
+              class="flex items-center w-[430px] h-[100px] rounded-xl shadow-md"
+            >
+              <div class="ml-10"><img src="assets/board.png" alt="" /></div>
+              <div>
+                <h1 class="text-xl font-medium text-white ml-6">
+                  Discover Something <br />
+                  New Today!
+                </h1>
+              </div>
             </div>
-          </div>
+          </a>
           <div
             class="w-[200px] h-[100px] bg-[#F4F7FF] flex justify-center items-center rounded-xl shadow-sm"
           >
@@ -80,6 +82,7 @@
             </div>
           </div>
         </div>
+        <hr class="text-gray-300 mb-7">
         <div class="grid gap-6 grid-cols-3">
           <!-- Box 1 -->
           <div
@@ -269,13 +272,15 @@
       >
         <div class="flex mt-1 mb-4">
           <img src="assets/activity.png" alt="" class="mr-3 w-6 h-6" />
-          <p class="text-lg font-medium">Activity Log</p>
+          <h1 class="text-lg font-medium">Activity Log<h1/>
         </div>
         <button
-          class="bg-[#3752FD] text-white p-2 w-[120px] text-sm rounded-lg mb-9 shadow-sm"
+          class="bg-[#3752FD] text-white p-2 w-[120px] text-sm rounded-lg mb-4 shadow-sm"
+          id="clr-history"
         >
           Clear History
         </button>
+        <hr class="w-full border-gray-300 mb-5">
       </section>
     </main>
     <script src="main.js"></script>

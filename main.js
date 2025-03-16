@@ -8,6 +8,9 @@ document.querySelectorAll(".completed-btn").forEach((btn) => {
     let taskDone = document.getElementById("task-done");
     let taskLeftNumber = Number(taskLeft.innerHTML);
     let taskDoneNumber = Number(taskDone.innerHTML);
+    if (taskLeftNumber === 1) {
+      alert("Congratulations! You have completed all the current tasks");
+    }
     taskLeft.innerHTML = taskLeftNumber - 1;
     taskDone.innerHTML = taskDoneNumber + 1;
 
@@ -33,6 +36,29 @@ document.querySelectorAll(".completed-btn").forEach((btn) => {
     activityLog.appendChild(logEntry);
   });
 });
+
+// Clear history
+document.getElementById("clr-history").addEventListener("click", function () {
+  const parent = document.getElementById("activity-log");
+  parent.querySelectorAll("p").forEach((child) => child.remove());
+});
+
+// Change background color
+function changeBackgroundColor() {
+  const colors = [
+    "lightblue",
+    "aqua",
+    "teal",
+    "conflowerblue",
+    "pink",
+    "indianred",
+    "khaki",
+    "lavender",
+    "lightgoldenrodyellow",
+  ];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.backgroundColor = randomColor;
+}
 
 // Day and Time
 function updateDayAndDate() {

@@ -6,3 +6,10 @@
     rgb(155, 168, 248) 99.733%
   );
 }
+
+.completed-btn:hover {
+  cursor: pointer;
+}
+.completed-btn:disabled {
+  cursor: not-allowed;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Tailwind CDN -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[rgba(244,247,255,255)] font-[Poppins]">
+    <header>
+      <nav
+        class="w-5/6 h-21 mx-auto mt-6 bg-white flex justify-between items-center rounded-2xl shadow-sm"
+      >
+        <div class="flex justify-center items-center ml-6">
+          <div class="w-10 h-10"><img src="assets/logo.png" alt="" /></div>
+          <h1 class="ml-2 text-3xl font-light">
+            Dev<span class="font-bold">Board</span>
+          </h1>
+        </div>
+        <div class="flex justify-between">
+          <div class="flex justify-center items-center mr-9">
+            <button
+              class="bg-[#3752FD] text-white p-3 w-38 rounded-lg shadow-sm font-medium text-lg"
+            >
+              <a href="index.html">Back to Desk</a>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="w-5/6 mx-auto mt-8">
+      <h1 class="text-center mb-8 text-2xl font-bold">Blogs</h1>
+      <!-- Question 1 -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm mb-5">
+        <p class="mb-3 font-semibold text-lg">
+          Question-1: What are the different ways to select an element in the
+          DOM?
+        </p>
+        <p class="mb-2 font-medium">
+          There are multiple ways to select an element in the DOM:
+        </p>
+        <ul class="list-disc ml-12">
+          <li>By Id: document.getElementById("Id");</li>
+          <li>By Class Name: document.getElementsByClassName("Class Name");</li>
+          <li>By Tag Name: document.getElementsByTagName("Tag Name");</li>
+          <li>querySelector: document.querySelector("CSS Selector");</li>
+          <li>querySelector: document.querySelectorAll("CSS Selector");</li>
+        </ul>
+      </div>
+      <!-- Question 2 -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm mb-5">
+        <p class="mb-3 font-semibold text-lg">
+          Question-2: What is the difference between innerHTML, innerText, and
+          textContent?
+        </p>
+        <p class="mb-2 font-medium">innerHTML vs innerText vs textContent:</p>
+        <p class="ml-12">
+          <span class="font-semibold">InnerHTML:</span> Using innerHTML allows
+          you to see exactly what’s in the HTML markup contained within a
+          string, including elements like spacing, line breaks and formatting.
+          <br />
+          <span class="font-semibold">InnerText:</span> This approximates the
+          “rendered” text content of a node and is aware of styling and CSS.
+          It’s most effective when you only need to see what’s in the element
+          without the formatting. <br />
+          <span class="font-semibold">TextContent:</span> This retrieves and
+          sets the content of the tag as plain text. It’s most effective when
+          you want to see what’s in an element, plus styling.
+        </p>
+      </div>
+      <!-- Question 3 -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm mb-5">
+        <p class="mb-3 font-semibold text-lg">
+          Question-3: What is event delegation in the DOM?
+        </p>
+        <p>
+          Event Delegation is basically a pattern to handle events efficiently.
+          Instead of adding an event listener to each and every similar element,
+          we can add an event listener to a parent element and call an event on
+          a particular target using the .target property of the event object.
+        </p>
+      </div>
+      <!-- Question 4 -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm mb-5">
+        <p class="mb-3 font-semibold text-lg">
+          Question-4: What is event bubbling in the DOM?
+        </p>
+        <p>
+          Event bubbling in JavaScript is a mechanism where an event triggered
+          on a child element propagates upward through its ancestors in the DOM.
+          It allows parent elements to respond to events triggered by their
+          child elements.
+        </p>
+      </div>
+      <!-- Question 5 -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm mb-10">
+        <p class="mb-3 font-semibold text-lg">
+          Question-5: How do you create, add, and remove elements using
+          JavaScript?
+        </p>
+        <p class="mb-2">
+          In JavaScript, you can create, add, and remove elements dynamically
+          using the DOM (Document Object Model).
+        </p>
+        <h3 class="font-medium">1. Creating an Element</h3>
+        <ul class="list-disc ml-12">
+          <li>
+            You can use the document.createElement() method to create a new HTML
+            element.
+          </li>
+        </ul>
+        <h3 class="font-medium">2. Adding an Element</h3>
+        You can add the newly created element to the DOM using:
+        <ul class="list-disc ml-12">
+          <li>appendChild() (adds at the end of the parent).</li>
+          <li>
+            append() (similar to appendChild, but allows multiple elements and
+            text nodes).
+          </li>
+          <li>
+            innerHTML (not recommended for dynamic content due to security
+            risks).
+          </li>
+        </ul>
+        <h3 class="font-medium">3. Removing an Element</h3>
+        <p>You can remove elements using:</p>
+        <ul class="list-disc ml-12">
+          <li>removeChild().</li>
+          <li>remove().</li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
